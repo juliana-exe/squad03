@@ -1,4 +1,15 @@
 from funcoes import *
+from funcoes import sair
+
+def menu_voltar_sair(nome):
+    while True:
+        escolha = input(f"\n{nome}, deseja voltar ao menu anterior ou encerrar o atendimento?\n[1] Voltar ao menu anterior\n[2] Encerrar atendimento\nEscolha: ")
+        if escolha == "1":
+            break
+        elif escolha == "2":
+            sair(nome)
+        else:
+            print("Por favor, insira uma opção válida.")
 
 print("Olá! Seja Bem vindo a loja SQUAD 3\n")
 nome = input("Como você gostaria de ser chamado(a)? ").title()
